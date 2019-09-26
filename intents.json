@@ -1,4 +1,4 @@
-{"intents": [
+﻿{"intents": [
     {
       "tag": "greeting",
       "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Supp", "What's up", "Wassup", "Yo", "Hey"],
@@ -174,7 +174,7 @@
     },
     {
       "tag": "medidata",
-      "patterns": ["Medidata", "Healthiest account", "Do you know the Medidata project?", "What is about Medidata?", "What do you know about Medidata?", "project with only 2 members", "team with only 2 members"],
+      "patterns": ["Medidata", "Healthiest account", "Do you know the Medidata project?", "What is about Medidata?", "What do you know about Medidata?", "project with only 2 members", "team with only 2 members", "team with 2 members"],
       "responses": ["Ah the Medidata project, located on 4th floor - TV office, doing business in healthcare. Visit their website :zany_face: : <https://www.medidata.com/en/|https://www.medidata.com/en/>"],
       "context_set": ["Medidata", "medidata"]
     },
@@ -186,7 +186,7 @@
     },
     {
       "tag": "medidata-team",
-      "patterns": ["Medidata team size", "How about Medidata team size?", "How many member in this project?", "How many member in Medidata?", "Medidata team count"],
+      "patterns": ["Medidata team size", "How about Medidata team size?", "How many member in this project?", "How many member in Medidata?", "Medidata team count", "Medidata member count"],
       "responses": ["Only 2 members :sweat_smile:"],
       "context_set": ["Medidata", "medidata"]
     },
@@ -198,13 +198,13 @@
     },
     {
       "tag": "medidata-date",
-      "patterns": ["Medidata start date", "When did Medidata start?", "When did Medidata begin", "start date"],
+      "patterns": ["Medidata start date", "When did Medidata start?", "When did Medidata begin", "start date", "Medidata start"],
       "responses": ["Aug 5, 2019 very recently :grin:"],
       "context_set": ["Medidata", "medidata"]
     },
     {
       "tag": "medidata-website",
-      "patterns": ["Medidata website", "What is Medidata's website?"],
+      "patterns": ["Medidata website", "What is Medidata's website?", "Medidata site"],
       "responses": ["There you go: <https://www.medidata.com/en/|https://www.medidata.com/en/>.\n Stay Healthy!! :face_with_head_bandage::nauseated_face::sneezing_face:  "],
       "context_set": ["Medidata", "medidata"]
     },
@@ -247,7 +247,7 @@
     {
       "tag": "autotrader",
       "patterns": ["Autotrader", "Do you know the Autotrader project?", "What is about Autotrader?", "What do you know about Autotrader?", "Trade cars", "trade autos"],
-      "responses": ["Wanna trade cars? Find Autotrader at  5th floor - TV office.\nDon't wanna google? Here's their website: <https://agreementexpress.com/|https://agreementexpress.com/>"],
+      "responses": ["Wanna trade cars? Find Autotrader at  5th floor - TV office.\nDon't wanna google? Here's their website: https://autotrader.com/"],
       "context_set": ["Autotrader", "AutoTrader", "autotrader"]
     },
     {
