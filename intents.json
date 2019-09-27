@@ -8,7 +8,12 @@
   {
     "tag": "greeting_questions",
     "patterns": ["How are you?", "How is it going?", "How's it going?", "How do you do?"],
-    "responses": ["01000101101010101001101101.\nGood luck translating that.", "Never better in this entire deployment.", "Great! Getting an update soon! :smile:", "Ya asking a bot's health? You lower my standard on humans :face_with_monocle:. "]
+    "responses": ["Never better in this entire deployment.", "Great! Getting an update soon! :smile:", "Ya asking a bot's health? You lower my standard on humans :face_with_monocle:. ", "I'm good. Thanks. How are you?"]
+  },
+  {
+    "tag": "response_greeting",
+    "patterns": ["I'm good", "I am good", "I am fine", "I am great", "I'm great", "I'm fine"],
+    "responses": ["Nice! :smile:", "Good to hear that!"]
   },
   {"tag": "goodbye",
     "patterns": ["Bye", "See you later", "Goodbye", "See ya", "So long", "Adios", "Adieu", "Buh bye"],
