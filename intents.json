@@ -16,7 +16,7 @@
   },
   {"tag": "thanks",
     "patterns": ["Thanks", "Thank you", "That's helpful"],
-    "responses": ["It says it's my duty in the source code, so you're welcome", "Are we done yet?","That's enough with the formalities. What's your 3 wishes?", "Nice to help :smile:", "u're welcome!", "Never mind!"]
+    "responses": ["It says it's my duty in the source code, so you're welcome, human.", "Are we done yet?","That's enough with the formalities. What's your 3 wishes?", "Nice to help :smile:", "u're welcome!", "Never mind!"]
   },
   {"tag": "hours",
     "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
@@ -33,24 +33,25 @@
   {
     "tag": "nothing",
     "patterns": ["", ":)", "understand"],
-    "responses": ["I can't understand what you are saying. Can you train me something? Ah, I always forgot whatever you say in one second! :zany_face:"]
+    "responses": ["I can't understand what you are saying. Can you train me something? Ah, I always forgot whatever you say in one second! (:zany_face:hint: upgrade my Ram and CPU)"]
   },
   {
     "tag": "HotSchedules",
-    "patterns": ["Which project is biggest in A+?"],
-    "responses": ["HS", "HotSchedules"],
+    "patterns": ["Which project is biggest in A+?", "Biggest project", "Largest project", "Largest team", "biggest in A+"],
+    "responses": ["HS of course. Never heard of it?", "HotSchedules is the name. Shame on you for not knowing."],
     "context_set": ["HotSchedules"]
   },
   {
     "tag": "biggest-project",
     "patterns": ["Which project is biggest in A+?"],
-    "responses": ["The biggest project of A+ HotSchedules", "HotSchedules"]
+    "responses": ["HS of course. Never heard of it?", "HotSchedules is the name. Shame on you for not knowing."]
   },
   {
     "tag": "hs_questions",
     "patterns": ["How many member in this project?", "What is industry of Hotschedules Project", "What is programming languanges in HS?", "Why Hotschedules is dismissed/closed "],
     "responses": ["Over 100 members in 2018 :heart:","Hotschedules is Restaurant industry","HS is used NodeJS","Hotschedules is acquired by Fourth :disappointed:"],
-    "context_set": ["HS", "HotSchedules"]
+    "context_filter": ["HotSchedules"],
+    "context_set": ["HotSchedules"]
   },
   {
     "tag": "HotSchedules_closed",
@@ -72,7 +73,7 @@
   },
   {
     "tag": "Kibo_size",
-    "patterns": ["How many member in this project?"],
+    "patterns": ["How many member in Kibo project?"],
     "responses": ["Over 50 members in 2014 :heart:"],
     "context_filter": ["Marketlive", "Kibo"]
   },
@@ -90,7 +91,7 @@
   },
   {
     "tag": "Projects",
-    "patterns": ["How many project in A+ currently?", "Projects in A Plus", "Accounts in A+"],
+    "patterns": ["How many project in A+ currently?", "Projects in A Plus", "Accounts in A+", "How many projects", "Project number"],
     "responses": ["Over 10 projects, you can refer on Intranet of A+ Accounts :heart:"]
   },
 
@@ -225,7 +226,7 @@
       "patterns": ["address", "client's address", "the project's address", "its address"],
       "responses": ["All the way to the Big Apple: 350 Hudson Street, New York :star-struck:."],
       "context_filter": ["medidata"],
-      "context_set": ["medidata"],
+      "context_set": ["medidata"]
     },
     {
       "tag": "medidata-team",
@@ -671,6 +672,26 @@
       "patterns": ["What fun fact of KBB "],
       "responses": ["A member of Tuyet Tinh Cox (Cox Automotive Client)", "Stable COE audit rating of 4.3"],
       "context_set": ["kbb"]
+    },
+    {
+      "tag": "ask_name",
+      "patterns": ["What is your name", "What's your name", "Your name", "What does your name mean"],
+      "responses": ["Fu.. I mean FunBot:robot_face:. FBot for short. I can tell jokes if what's written in my source code is correct.", "Stable COE audit rating of 4.3"]
+    },
+    {
+      "tag": "bu_head",
+      "patterns": ["Who is A+ BU head", "BU head", "BU head name", "Who is Mai Le"],
+      "responses": ["You mean our cute BU head Mai Le. Be careful not to piss her off. She once kicked me out of my old Workspace:cry:."]
+    },
+    {
+      "tag": "bu_member",
+      "patterns": ["A+ count", "A+ member count", "A+ bu number of member"],
+      "responses": ["1.. 2.. 3.. *beep* *beep* classified information. Please refer to our BU Head Mai Le."]
+    },
+    {
+      "tag": "nonesense",
+      "patterns": ["ok", "wow", "nani"],
+      "responses": ["Stop wasting mah time with these nonesense mate. What's your 3 wishes?"]
     }
   ]
 }
