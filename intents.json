@@ -37,20 +37,21 @@
   },
   {
     "tag": "HotSchedules",
-    "patterns": ["Which project is biggest in A+?"],
-    "responses": ["HS", "HotSchedules"],
+    "patterns": ["Which project is biggest in A+?", "Biggest project", "Largest project", "Largest team", "biggest in A+"],
+    "responses": ["HS of course. Never heard of it?", "HotSchedules is the name. Shame on you for not knowing."],
     "context_set": ["HotSchedules"]
   },
   {
     "tag": "biggest-project",
     "patterns": ["Which project is biggest in A+?"],
-    "responses": ["The biggest project of A+ HotSchedules", "HotSchedules"]
+    "responses": ["HS of course. Never heard of it?", "HotSchedules is the name. Shame on you for not knowing."]
   },
   {
     "tag": "hs_questions",
     "patterns": ["How many member in this project?", "What is industry of Hotschedules Project", "What is programming languanges in HS?", "Why Hotschedules is dismissed/closed "],
     "responses": ["Over 100 members in 2018 :heart:","Hotschedules is Restaurant industry","HS is used NodeJS","Hotschedules is acquired by Fourth :disappointed:"],
-    "context_set": ["HS", "HotSchedules"]
+    "context_filter": ["HotSchedules"],
+    "context_set": ["HotSchedules"]
   },
   {
     "tag": "HotSchedules_closed",
@@ -72,7 +73,7 @@
   },
   {
     "tag": "Kibo_size",
-    "patterns": ["How many member in this project?"],
+    "patterns": ["How many member in Kibo project?"],
     "responses": ["Over 50 members in 2014 :heart:"],
     "context_filter": ["Marketlive", "Kibo"]
   },
@@ -90,7 +91,7 @@
   },
   {
     "tag": "Projects",
-    "patterns": ["How many project in A+ currently?", "Projects in A Plus", "Accounts in A+"],
+    "patterns": ["How many project in A+ currently?", "Projects in A Plus", "Accounts in A+", "How many projects", "Project number"],
     "responses": ["Over 10 projects, you can refer on Intranet of A+ Accounts :heart:"]
   },
 
@@ -679,7 +680,7 @@
     },
     {
       "tag": "bu_head",
-      "patterns": ["Who is A+ BU head", "BU head", "BU head name"],
+      "patterns": ["Who is A+ BU head", "BU head", "BU head name", "Who is Mai Le"],
       "responses": ["You mean our cute BU head Mai Le. Be careful not to piss her off. She once kicked me out of my old Workspace:cry:."]
     },
     {
