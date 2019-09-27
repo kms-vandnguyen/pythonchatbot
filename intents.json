@@ -225,7 +225,7 @@
       "patterns": ["address", "client's address", "the project's address", "its address"],
       "responses": ["All the way to the Big Apple: 350 Hudson Street, New York :star-struck:."],
       "context_filter": ["medidata"],
-      "context_set": ["medidata"],
+      "context_set": ["medidata"]
     },
     {
       "tag": "medidata-team",
