@@ -1,4 +1,4 @@
-{"intents": [
+﻿{"intents": [
   {
     "tag": "greeting",
     "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Supp", "What's up", "Wassup", "Yo", "Hey"],
@@ -209,117 +209,210 @@
       "context_set": ["poem", "short poem", "more poem"]
     },
     {
-      "tag": "short-funny-stories",
-      "patterns": ["Story", "Short story", "Can you tell me something fun?", "more story"],
-      "responses": ["*Now that’s what I call stupid*: \n In my junior year of high school, this guy asked me on a date. He rented a Redbox movie and made a pizza. We were watching the movie and the oven beeped so the pizza was done. He looked me dead in the eye and said, This is the worst part. I then watched this boy open the oven and pull the pizza out with his bare hands, rack and all, screaming at the top of his lungs. We never had a second date."]
-    },
-    {
       "tag": "medidata",
-      "patterns": ["Medidata", "Healthiest account", "Do you know the Medidata project?", "What is about Medidata?", "What do you know about Medidata?", "project with only 2 members", "team with only 2 members"],
+      "patterns": ["Medidata", "Healthiest account", "Do you know the Medidata project?", "What is about Medidata?", "What do you know about Medidata?", "project with only 2 members", "team with only 2 members", "team with 2 members"],
       "responses": ["Ah the Medidata project, located on 4th floor - TV office, doing business in healthcare. Visit their website :zany_face: : <https://www.medidata.com/en/|https://www.medidata.com/en/>"],
-      "context_set": ["Medidata", "medidata"]
+      "context_set": ["medidata"]
     },
     {
       "tag": "medidata-address",
-      "patterns": ["Medidata address", "Medidata client's address", "the project's address"],
+      "patterns": ["Medidata address", "Medidata client's address", "the project Medidata's address"],
       "responses": ["All the way to the Big Apple: 350 Hudson Street, New York :star-struck:."],
-      "context_set": ["Medidata", "medidata"]
+      "context_set": ["medidata"]
+    },
+    {
+      "tag": "medidata-address1",
+      "patterns": ["address", "client's address", "the project's address", "its address"],
+      "responses": ["All the way to the Big Apple: 350 Hudson Street, New York :star-struck:."],
+      "context_filter": ["medidata"],
+      "context_set": ["medidata"],
     },
     {
       "tag": "medidata-team",
-      "patterns": ["Medidata team size", "How about Medidata team size?", "How many member in this project?", "How many member in Medidata?", "Medidata team count"],
+      "patterns": ["Medidata team size", "How about Medidata team size?", "How many member in Medidata?", "Medidata team count", "Medidata member count"],
       "responses": ["Only 2 members :sweat_smile:"],
-      "context_set": ["Medidata", "medidata"]
+      "context_set": ["medidata"]
+    },
+    {
+      "tag": "medidata-team1",
+      "patterns": ["team size", "The project team size", "How about team size?", "How many member in this project?", "How many member", "team count", "member count"],
+      "responses": ["Only 2 members :sweat_smile:"],
+      "context_filter": ["medidata"],
+      "context_set": ["medidata"]
     },
     {
       "tag": "medidata-domain",
-      "patterns": ["domain", "How about Medidata business?", "What is the domain of this project?", "What is the business of Medidata?", "What domain is Medidata in?"],
+      "patterns": ["How about Medidata business?", "What is the domain of this project?", "What is the business of Medidata?", "What domain is Medidata in?"],
       "responses": ["Healthcare (Obviously :face_with_rolling_eyes:)"],
-      "context_set": ["Medidata", "medidata"]
+      "context_set": ["medidata"]
+    },
+    {
+      "tag": "medidata-domain1",
+      "patterns": ["domain", "How about its business?", "What is the domain of this project?", "What is its business?", "What domain is it in?"],
+      "responses": ["Healthcare (Obviously :face_with_rolling_eyes:)"],
+      "context_filter": ["medidata"],
+      "context_set": ["medidata"]
     },
     {
       "tag": "medidata-date",
-      "patterns": ["Medidata start date", "When did Medidata start?", "When did Medidata begin", "start date"],
-      "responses": ["Aug 5, 2019 very recently :grin:"],
-      "context_set": ["Medidata", "medidata"]
+      "patterns": ["Medidata start date", "When did Medidata start?", "When did Medidata begin","Medidata start"],
+      "responses": ["Aug 5, 2019. It's also Neil Armstrong birthday. To the :full_moon:!"],
+      "context_set": ["medidata"]
+    },
+    {
+      "tag": "medidata-date1",
+      "patterns": ["start date", "When did it start?", "When did it begin", "show start date"],
+      "responses": ["Aug 5, 2019. It's also Neil Armstrong birthday. To the :full_moon:!"],
+      "context_filter": ["medidata"],
+      "context_set": ["medidata"]
     },
     {
       "tag": "medidata-website",
-      "patterns": ["Medidata website", "What is Medidata's website?"],
+      "patterns": ["Medidata website", "What is Medidata's website?", "Medidata site"],
       "responses": ["There you go: <https://www.medidata.com/en/|https://www.medidata.com/en/>.\n Stay Healthy!! :face_with_head_bandage::nauseated_face::sneezing_face:  "],
-      "context_set": ["Medidata", "medidata"]
+      "context_set": ["medidata"]
+    },
+    {
+      "tag": "medidata-website1",
+      "patterns": ["website", "What is its website?", "its site"],
+      "responses": ["There you go: <https://www.medidata.com/en/|https://www.medidata.com/en/>.\n Stay Healthy!! :face_with_head_bandage::nauseated_face::sneezing_face:  "],
+      "context_filter": ["medidata"],
+      "context_set": ["medidata"]
     },
     {
       "tag": "agreement-express",
-      "patterns": ["Agreement Express", "Fastest deal", "Fastest deal ever", "Shortest deal",  "Do you know the Agreement Express project?", "What is about Agreement Express?", "What do you know about Agreement Express?", "Most recent project", "Closed won in 10 days"],
+      "patterns": ["Agreement Express", "Fastest deal", "Fastest deal ever", "Shortest deal",  "Do you know the Agreement Express project?", "What is about Agreement Express?", "What do you know about Agreement Express?", "Most recent project", "Closed won in 10 days", "Most recent deal"],
       "responses": ["Ah that one, the Agreement Express project, located on 4th floor - TV office, doing business in Fintech.\n :shushing_face: Here's their website (don't tell anyone :shushing_face:): <https://agreementexpress.com/|https://agreementexpress.com/>"],
-      "context_set": ["Agreement Express", "AgreementExpress", "agreement-express", "agreementexpress"]
+      "context_set": ["agreementexpress"]
     },
     {
       "tag": "agreement-express-address",
-      "patterns": ["Agreement Express address", "Agreement Express client's address", "the project's address"],
+      "patterns": ["Agreement Express address", "Agreement Express client's address", "the project Agreement Express's address"],
       "responses": ["625 Howe St. Suite 900 Vancouver, British Columbia Canada V6C 2T6.\n(How can you find this address ANW, it's a mess :face_with_monocle::face_with_monocle:)"],
-      "context_set": ["Agreement Express", "AgreementExpress", "agreement-express", "agreementexpress"]
+      "context_set": ["agreementexpress"]
+    },
+    {
+      "tag": "agreement-express-address1",
+      "patterns": ["address", "client's address", "the project's address"],
+      "responses": ["625 Howe St. Suite 900 Vancouver, British Columbia Canada V6C 2T6.\n(How can you find this address ANW, it's a mess :face_with_monocle::face_with_monocle:)"],
+      "context_filter": ["agreementexpress"],
+      "context_set": ["agreementexpress"]
     },
     {
       "tag": "agreement-express-team",
-      "patterns": ["Agreement Express team size", "How about Agreement Express team size?", "How many member in this project?", "How many member in Agreement Express?", "Agreement Express team count"],
+      "patterns": ["Agreement Express team size", "How about Agreement Express team size?", "How many member in Agreement Express?", "Agreement Express team count"],
       "responses": ["Already 16 people, yikes :flushed:"],
-      "context_set": ["Agreement Express", "AgreementExpress", "agreement-express", "agreementexpress"]
+      "context_set": ["agreementexpress"]
+    },
+    {
+      "tag": "agreement-express-team1",
+      "patterns": ["team size", "How about their team size?", "How many member in this project?", "their team count"],
+      "responses": ["Already 16 people, yikes :flushed:"],
+      "context_filter": ["agreementexpress"],
+      "context_set": ["agreementexpress"]
     },
     {
       "tag": "agreement-express-domain",
-      "patterns": ["domain", "How about Agreement Express business?", "What is the domain of this project?", "What is the business of Agreement Express?", "What domain is Agreement Express in?"],
+      "patterns": ["How about Agreement Express business?", "What is the business of Agreement Express?", "What domain is Agreement Express in?"],
       "responses": ["Somewhere between Finance and Tech...\n Ah FinTech :money_mouth_face::money_mouth_face::money_mouth_face:"],
-      "context_set": ["Agreement Express", "AgreementExpress", "agreement-express", "agreementexpress"]
+      "context_set": ["agreementexpress"]
+    },
+    {
+      "tag": "agreement-express-domain1",
+      "patterns": ["domain", "How about its business?", "What is the domain of this project?", "What is its business?", "What domain is it in?"],
+      "responses": ["Somewhere between Finance and Tech...\n Ah FinTech :money_mouth_face::money_mouth_face::money_mouth_face:"],
+      "context_filter": ["agreementexpress"],
+      "context_set": ["agreementexpress"]
     },
     {
       "tag": "agreement-express-date",
-      "patterns": ["Agreement Express start date", "When did Agreement Expresss start?", "When did Agreement Express begin", "start date"],
+      "patterns": ["Agreement Express start date", "When did Agreement Expresss start?", "When did Agreement Express begin"],
       "responses": ["Sep 16, 2019.\nAbout 10 days prior :thinking_face:."],
-      "context_set": ["Agreement Express", "AgreementExpress", "agreement-express", "agreementexpress"]
+      "context_set": ["agreementexpress"]
+    },
+    {
+      "tag": "agreement-express-date1",
+      "patterns": ["start date", "When did the project start?", "When did the project begin", "start date"],
+      "responses": ["Sep 16, 2019.\nAbout 10 days prior :thinking_face:."],
+      "context_filter": ["agreementexpress"],
+      "context_set": ["agreementexpress"]
     },
     {
       "tag": "agreement-express-website",
       "patterns": ["Medidata website", "What is Medidata's website?"],
       "responses": ["Too lazy to Google?\nHere, help yourself: https://agreementexpress.com/"],
-      "context_set": ["Agreement Express", "AgreementExpress", "agreement-express", "agreementexpress"]
+      "context_set": ["agreementexpress"]
+    },
+    {
+      "tag": "agreement-express-website1",
+      "patterns": ["the project's website", "What is its website?", "its site"],
+      "responses": ["Too lazy to Google?\nHere, help yourself: https://agreementexpress.com/"],
+      "context_filter": ["agreementexpress"],
+      "context_set": ["agreementexpress"]
     },
     {
       "tag": "autotrader",
       "patterns": ["Autotrader", "Do you know the Autotrader project?", "What is about Autotrader?", "What do you know about Autotrader?", "Trade cars", "trade autos"],
-      "responses": ["Wanna trade cars? Find Autotrader at  5th floor - TV office.\nDon't wanna google? Here's their website: <https://agreementexpress.com/|https://agreementexpress.com/>"],
-      "context_set": ["Autotrader", "AutoTrader", "autotrader"]
+      "responses": ["Wanna trade cars? Find Autotrader at  5th floor - TV office.\nDon't wanna google? Here's their website: https://autotrader.com/"],
+      "context_set": ["autotrader"]
     },
     {
       "tag": "autotrader-address",
-      "patterns": ["Autotrader address", "Autotrader client's address", "the project's address"],
+      "patterns": ["Autotrader address", "Autotrader client's address"],
       "responses": ["3003 Summit Blvd NE #200, Atlanta, GA 30319, USA.\nAnother mess of an address... :expressionless:"],
-      "context_set": ["Autotrader", "AutoTrader", "autotrader"]
+      "context_set": ["autotrader"]
+    },
+    {
+      "tag": "autotrader-address1",
+      "patterns": ["their address", "its address", "the project's address"],
+      "responses": ["3003 Summit Blvd NE #200, Atlanta, GA 30319, USA.\nAnother mess of an address... :expressionless:"],
+      "context_filter": ["autotrader"],
+      "context_set": ["autotrader"]
     },
     {
       "tag": "autotrader-team",
-      "patterns": ["Autotrader team size", "How about Autotrader team size?", "How many member in this project?", "How many member in Autotrader?", "Autotrader team count"],
+      "patterns": ["Autotrader team size", "How about Autotrader team size?", "How many member in Autotrader?", "Autotrader team count"],
       "responses": ["7 (eleven :bug:)"],
-      "context_set": ["Autotrader", "AutoTrader", "autotrader"]
+      "context_set": ["autotrader"]
+    },
+    {
+      "tag": "autotrader-team1",
+      "patterns": ["their team size", "How about its team size?", "How many member in this project?", "How many member in the project?", "their team count"],
+      "responses": ["7 (eleven :bug:)"],
+      "context_filter": ["autotrader"],
+      "context_set": ["autotrader"]
     },
     {
       "tag": "autotrader-domain",
-      "patterns": ["domain", "How about Autotrader business?", "What is the domain of this project?", "What is the business of Autotrader?", "What domain is Autotrader in?"],
+      "patterns": ["How about Autotrader business?", "What is the business of Autotrader?", "What domain is Autotrader in?"],
       "responses": ["Lemme spell it for you A-U-T-O.\n(Read between the lines mate , it's that obvious :unamused:)"],
-      "context_set": ["Autotrader", "AutoTrader", "autotrader"]
+      "context_set": ["autotrader"]
+    },
+    {
+      "tag": "autotrader-domain1",
+      "patterns": ["domain", "How about its business?", "What is the domain of this project?", "What is the business of the project?", "What domain is it in?"],
+      "responses": ["Lemme spell it for you A-U-T-O.\n(Read between the lines mate , it's that obvious :unamused:)"],
+      "context_filter": ["autotrader"],
+      "context_set": ["autotrader"]
     },
     {
       "tag": "autotrader-date",
-      "patterns": ["Autotrader start date", "When did Autotrader start?", "When did Autotrader begin", "start date"],
-      "responses": ["Jxan 1, 2014. One of the elders :face_with_monocle:."],
-      "context_set": ["Autotrader", "AutoTrader", "autotrader"]
+      "patterns": ["Autotrader start date", "When did Autotrader start?", "When did Autotrader begin"],
+      "responses": ["Jxan 1, 2014. One of the oldest :face_with_monocle:."],
+      "context_set": ["autotrader"]
+    },
+    {
+      "tag": "autotrader-date1",
+      "patterns": ["start date", "When did the project start?", "When did the project begin", "When did it begin", "start date"],
+      "responses": ["Jan 1, 2014. One of the oldest :face_with_monocle:."],
+      "context_filter": ["autotrader"],
+      "context_set": ["autotrader"]
     },
     {
       "tag": "autotrader-website",
       "patterns": ["Autotrader website", "What is Autotrader's website?"],
       "responses": ["Here, lemme help you. \n1. Get to google.com.\n2. Type Autotrader, hit Enter.\n3. Click the first link.\n4. Profit ????"],
-      "context_set": ["Autotrader", "AutoTrader", "autotrader"]
+      "context_set": ["autotrader"]
     },
     {
       "tag": "bbsquestion1",
